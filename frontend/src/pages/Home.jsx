@@ -8,14 +8,20 @@ function Home() {
     { id: 2, title: "Mohammed film", realese_date: "2024" },
     { id: 3, title: "Mohammed film", realese_date: "2024" },
   ];
-  const handleSearch = () => {};
+  const handleSearch = (e) => {
+    e.preventDefault();
+    alert(searchQuery);
+    setSeachQuery("");
+  };
   return (
     <div className="home">
-      <form className="search-form" onClick={handleSearch}>
+      <form className="search-form" onSubmit={handleSearch}>
         <input
           type="text"
           placeholder="Search for A movie..."
           className="search-input"
+          value={searchQuery}
+          onChange={(e) => setSeachQuery(e.target.value)}
         />
         <button type="submit" className="search-button">
           Search
