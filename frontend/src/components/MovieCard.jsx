@@ -8,7 +8,9 @@ function MovieCard({ movie }) {
         <img src="{movie.url}" alt="{movie.title}" />
       </div>
       <div className="movie-overlay">
-        <button className="favourite-btn" onClick={onFavouriteClick}></button>
+        <button className="favourite-btn" onClick={onFavouriteClick}>
+          🤍
+        </button>
       </div>
       <div className="movie=info">
         <h3>{movie.title}</h3>
